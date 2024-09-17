@@ -197,6 +197,7 @@ footer {
 
 footer img {
   display: initial;
+  vertical-align: middle;
 }
 
 footer p {
@@ -205,4 +206,8 @@ footer p {
 
 .pixel {
   image-rendering: pixelated;
+}
+
+.eggbug-button {
+  vertical-align: middle;
 }
