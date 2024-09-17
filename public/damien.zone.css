@@ -190,3 +190,19 @@ table {
 th {
   text-align: left;
 }
+
+footer {
+  text-align: center;
+}
+
+footer img {
+  display: initial;
+}
+
+footer p {
+  text-align: center;
+}
+
+.pixel {
+  image-rendering: pixelated;
+}
