@@ -38,7 +38,7 @@
       var(--color-base)
     );
     --code-background-color: hsl(343, 38%, 50%);
-    --code-color: #222129;
+    --code-color: var(--background-color);
   }
 }
 
