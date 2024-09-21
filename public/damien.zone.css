@@ -4,7 +4,7 @@
 
 /* common variables */
 :root {
-  --width: 720px;
+  --width: 80ch;
   --font-main: "Hack", monospace;
   --font-monospace: "Hack", monospace;
   --font-secondary: "Atkinson Hyperlegible", monospace;
