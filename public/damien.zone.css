@@ -1,18 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css");
 
+/* common variables */
 :root {
   --width: 720px;
-  --font-main: "Fira Code", monospace;
-  --font-secondary: "Fira Code", monospace;
+  --font-main: "Hack", monospace;
+  --font-monospace: "Hack", monospace;
+  --font-secondary: "Atkinson Hyperlegible", monospace;
   --font-scale: 1em;
+}
+
+/* colors */
+:root {
+  --color-base: hsl(343, 81%, 40%);
   --background-color: #222129;
-  --heading-color: #ffa86a;
+  --heading-color: var(--color-base);
   --text-color: #ffa86a;
-  --link-color: #ffa86a;
-  --visited-color: #bc8d6b;
-  --code-background-color: #bc8d6b;
+  --text-color: #d1d5db;
+  --link-color: var(--color-base);
+  --visited-color: color-mix(in srgb, var(--text-color) 90%, var(--color-base));
+  --code-background-color: hsl(343, 70%, 56%);
   --code-color: #222129;
-  --blockquote-color: #222;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-base: #be133c;
+    --background-color: hsl(0, 0%, 88%);
+    --heading-color: var(--color-base);
+    --text-color: #ffa86a;
+    --text-color: #384151;
+    --link-color: var(--color-base);
+    --visited-color: color-mix(
+      in srgb,
+      var(--text-color) 90%,
+      var(--color-base)
+    );
+    --code-background-color: hsl(343, 38%, 50%);
+    --code-color: #222129;
+  }
 }
 
 body {
@@ -40,20 +67,26 @@ h6 {
 }
 
 a {
-  color: var(--link-color);
+  color: inherit;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--link-color);
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 main {
   margin-top: 40px;
   margin-bottom: 20px;
-  padding: 30px;
-  border: 1px solid var(--link-color);
+  padding: 20px 30px;
+  border-width: 6px;
+  border-color: var(--link-color);
+  border-style: ridge;
+  border-radius: 4px;
 }
 
 nav a {
@@ -88,7 +121,8 @@ img {
 }
 
 code {
-  font-family: monospace;
+  font-family: var(--font-monospace);
+  font-size: 0.9em;
   padding: 2px;
   background-color: var(--code-background-color);
   color: var(--code-color);
@@ -116,12 +150,12 @@ footer {
 }
 
 .title h1 {
-  font-size: 1em;
+  font-size: 1.4em;
   padding: 5px 10px;
   background: var(--heading-color);
   color: var(--background-color);
   display: inline-block;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .inline {
