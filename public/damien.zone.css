@@ -20,8 +20,8 @@
   --text-color: #d1d5db;
   --link-color: var(--color-base);
   --visited-color: color-mix(in srgb, var(--text-color) 90%, var(--color-base));
-  --code-background-color: hsl(343, 70%, 56%);
-  --code-color: #222129;
+  --code-background-color: hsl(343, 20%, 20%);
+  --code-color: #d1d5db;
 }
 
 @media (prefers-color-scheme: light) {
@@ -37,7 +37,7 @@
       var(--text-color) 90%,
       var(--color-base)
     );
-    --code-background-color: hsl(343, 38%, 50%);
+    --code-background-color: #222129;
     --code-color: var(--background-color);
   }
 }
@@ -174,7 +174,7 @@ footer {
 }
 
 .highlight {
-  border-left: 5px solid var(--heading-color);
+  /* border-left: 5px solid var(--heading-color); */
 }
 
 /* blog post list */
