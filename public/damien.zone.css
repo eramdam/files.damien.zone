@@ -249,3 +249,31 @@ footer p {
 .eggbug-button {
   vertical-align: middle;
 }
+
+.rehype-figure {
+  text-align: center;
+}
+
+.rehype-figure video {
+  max-width: 100%;
+}
+
+:is(.rehype-figure, figure) figcaption,
+figcaption {
+  text-align: center;
+}
+
+:is(.rehype-figure, figure) > :is(video, img) {
+  margin: 0 auto;
+}
+
+:is(.rehype-figure, figure) figcaption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+:is(.rehype-figure, figure) figcaption a .external-icon {
+  width: 16px;
+  height: 16px;
+}
