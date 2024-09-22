@@ -142,6 +142,9 @@ blockquote {
 footer {
   padding: 25px 0;
   text-align: center;
+}
+
+footer > :not(#footer-directive) {
   opacity: 0.6;
 }
 
