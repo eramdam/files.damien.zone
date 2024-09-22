@@ -280,3 +280,29 @@ figcaption {
   width: 16px;
   height: 16px;
 }
+
+#myWebRing {
+  margin: 10px auto;
+  font-family: var(--font-main) !important;
+  background: transparent !important;
+  border-width: 4px;
+  border-color: var(--link-color);
+  border-style: ridge;
+  border-radius: 4px;
+  width: 400px !important;
+}
+
+#myWebRing img {
+  display: none;
+}
+
+#myWebRing > div:first-child {
+  background-image: url("https://gumdisease.neocities.org/images/eggbug.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+#myWebRing > div:last-child {
+  background-color: var(--link-color) !important;
+  height: 26px !important;
+}
