@@ -26,6 +26,12 @@ fastify.get("*", async (request, reply) => {
     s.remove();
   });
 
+  parsedPage.querySelectorAll("link[rel=stylesheet]").forEach((s) => {
+    if (s.getAttribute("href")?.startsWith("/")) {
+      s.setAttribute("href", `https://damien.zone${s.getAttribute("href")}`);
+    }
+  });
+
   parsedPage.querySelector("head")?.insertAdjacentHTML(
     "beforeend",
     `
