@@ -19,24 +19,24 @@
     {
       "link": "https://renkotsuban.com",
       "name": "Midnight Reading: Renkon's Personal Site",
-      "src": "http://renkotsuban.com/button.gif",
+      "src": "./public/buttons/renkotsuban.gif",
       "filename": "renkotsuban.gif"
     },
     {
       "link": "https://jkap.io",
       "name": "jae kaplan",
-      "src": "https://files.crime.team/site/jkap-88x31.gif",
+      "src": "./public/buttons/jkap.gif",
       "filename": "jkap.gif"
     },
     {
       "link": "https://blog.someplace-else.xyz/",
       "name": "someplace elsewhere",
-      "src": "https://natclayton.uk/wp-content/uploads/2024/09/elsewhere.gif"
+      "src": "./public/buttons/elsewhere.gif"
     },
     {
       "link": "https://wavebeem.com",
       "name": "wavebeem.com",
-      "src": "https://wavebeem.com/button.gif",
+      "src": "./public/buttons/wavebeem.gif",
       "filename": "wavebeem.gif"
     }
   ]
