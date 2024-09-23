@@ -54,6 +54,12 @@
       "filename": "kokoscript.gif"
     },
     {
+      "link": "https://lexfeathers.ca",
+      "name": "Lex Feathers",
+      "src": "./public/buttons/lexfeathers.png",
+      "filename": "lexfeathers.png"
+    },
+    {
       "link": "https://meow.garden/",
       "name": "meow.garden",
       "src": "./public/buttons/meowgarden-88x31.png",
