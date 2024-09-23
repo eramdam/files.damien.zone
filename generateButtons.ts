@@ -43,7 +43,11 @@ import {
   }
 
   console.log(html);
-  updateButtonConfig(buttonDefinitions);
+  updateButtonConfig(
+    buttonDefinitions.toSorted((a, b) => {
+      return a.name.localeCompare(b.name);
+    })
+  );
 })();
 
 async function downloadFile(url: string, filename: string) {

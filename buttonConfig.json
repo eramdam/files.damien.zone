@@ -2,60 +2,10 @@
   "host": "https://files.damien.zone",
   "buttons": [
     {
-      "link": null,
-      "name": "I was on cohost",
-      "src": "./public/buttons/i-was-on-cohost.gif"
-    },
-    {
-      "link": "https://cdrom.ca/",
-      "name": "CD-ROM journal",
-      "src": "./public/buttons/cdromjournal.png"
-    },
-    {
-      "link": "https://capstasher.neocities.org/88x31collection-page1",
-      "name": "the largest 88x31 collection",
-      "src": "./public/buttons/the-largest-88x31-collection-2.png"
-    },
-    {
-      "link": "https://renkotsuban.com",
-      "name": "Midnight Reading: Renkon's Personal Site",
-      "src": "./public/buttons/renkotsuban.gif",
-      "filename": "renkotsuban.gif"
-    },
-    {
-      "link": "https://jkap.io",
-      "name": "jae kaplan",
-      "src": "./public/buttons/jkap.gif",
-      "filename": "jkap.gif"
-    },
-    {
-      "link": "https://blog.someplace-else.xyz/",
-      "name": "someplace elsewhere",
-      "src": "./public/buttons/elsewhere.gif"
-    },
-    {
-      "link": "https://wavebeem.com",
-      "name": "wavebeem.com",
-      "src": "./public/buttons/wavebeem.gif",
-      "filename": "wavebeem.gif"
-    },
-    {
       "link": "https://auratriolo.com/blog/",
       "name": "Aura!",
       "src": "./public/buttons/aura-pixelbanner.gif",
       "filename": "aura-pixelbanner.gif"
-    },
-    {
-      "link": "https://kokoscript.com/",
-      "name": "kokoscript",
-      "src": "./public/buttons/kokoscript.gif",
-      "filename": "kokoscript.gif"
-    },
-    {
-      "link": "https://blog.radicaldream.land/",
-      "name": "Dispatch from the Radical Dreamland",
-      "src": "./public/buttons/dispatchblog-banner.gif",
-      "filename": "dispatchblog-banner.gif"
     },
     {
       "link": "https://blog.aurahack.jp/",
@@ -64,16 +14,62 @@
       "filename": "aurahack.gif"
     },
     {
+      "link": "https://alyaza.neocities.org/",
+      "name": "birzeblog",
+      "src": "./public/buttons/birzeblog.gif",
+      "filename": "birzeblog.gif"
+    },
+    {
+      "link": "https://cdrom.ca/",
+      "name": "CD-ROM journal",
+      "src": "./public/buttons/cdromjournal.png"
+    },
+    {
+      "link": "https://blog.radicaldream.land/",
+      "name": "Dispatch from the Radical Dreamland",
+      "src": "./public/buttons/dispatchblog-banner.gif",
+      "filename": "dispatchblog-banner.gif"
+    },
+    {
+      "link": null,
+      "name": "I was on cohost",
+      "src": "./public/buttons/i-was-on-cohost.gif"
+    },
+    {
+      "link": "https://jkap.io",
+      "name": "jae kaplan",
+      "src": "./public/buttons/jkap.gif",
+      "filename": "jkap.gif"
+    },
+    {
+      "link": "https://ellen.zone/",
+      "name": "kataspace",
+      "src": "./public/buttons/ellenzone.png",
+      "filename": "ellenzone.png"
+    },
+    {
+      "link": "https://kokoscript.com/",
+      "name": "kokoscript",
+      "src": "./public/buttons/kokoscript.gif",
+      "filename": "kokoscript.gif"
+    },
+    {
       "link": "https://meow.garden/",
       "name": "meow.garden",
       "src": "./public/buttons/meowgarden-88x31.png",
       "filename": "meowgarden-88x31.png"
     },
     {
-      "link": "https://suricrasia.online/",
-      "name": "Suricrasia Online",
-      "src": "./public/buttons/suricrasia.gif",
-      "filename": "suricrasia.gif"
+      "link": "https://renkotsuban.com",
+      "name": "Midnight Reading: Renkon's Personal Site",
+      "src": "./public/buttons/renkotsuban.gif",
+      "filename": "renkotsuban.gif"
+    },
+    {
+      "link": "https://nickyflowers.com/",
+      "name": "Nicky Flowers' Web Crevice",
+      "src": "./public/buttons/nickyflowers.gif",
+      "filename": "nickyflowers.gif"
     },
     {
       "link": "https://shadenexus.com/",
@@ -86,6 +82,34 @@
       "name": "Shade Nexus",
       "src": "./public/buttons/qcq.png",
       "filename": "qcq.png"
+    },
+    {
+      "link": "https://blog.someplace-else.xyz/",
+      "name": "someplace elsewhere",
+      "src": "./public/buttons/elsewhere.gif"
+    },
+    {
+      "link": "https://suricrasia.online/",
+      "name": "Suricrasia Online",
+      "src": "./public/buttons/suricrasia.gif",
+      "filename": "suricrasia.gif"
+    },
+    {
+      "link": "https://capstasher.neocities.org/88x31collection-page1",
+      "name": "the largest 88x31 collection",
+      "src": "./public/buttons/the-largest-88x31-collection-2.png"
+    },
+    {
+      "link": "https://yesterweb.org/",
+      "name": "The Yesterweb",
+      "src": "./public/buttons/yesterweb.png",
+      "filename": "yesterweb.png"
+    },
+    {
+      "link": "https://wavebeem.com",
+      "name": "wavebeem.com",
+      "src": "./public/buttons/wavebeem.gif",
+      "filename": "wavebeem.gif"
     }
   ]
 }
