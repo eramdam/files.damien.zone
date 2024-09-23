@@ -4,7 +4,11 @@ import path from "node:path";
 import { Readable } from "stream";
 import { finished } from "stream/promises";
 import { URL } from "url";
-import { buttonDefinitions, IMAGES_HOST } from "./buttonsDef";
+import {
+  buttonDefinitions,
+  IMAGES_HOST,
+  updateButtonConfig,
+} from "./buttonsDef";
 
 (async () => {
   if (!fs.existsSync("./public/buttons")) {
@@ -13,7 +17,7 @@ import { buttonDefinitions, IMAGES_HOST } from "./buttonsDef";
 
   let html = ``;
 
-  for (const buttonDef of buttonDefinitions) {
+  for (let buttonDef of buttonDefinitions) {
     let buttonHtml = ``;
     let imageSrc = buttonDef.src;
     if (URL.parse(buttonDef.src) && buttonDef.link) {
@@ -22,6 +26,7 @@ import { buttonDefinitions, IMAGES_HOST } from "./buttonsDef";
         buttonDef.src,
         buttonDef.filename ?? getFilenameFromURL(parsedUrl)
       );
+      buttonDef.src = `./public${imageSrc}`;
     } else {
       assert(
         fs.existsSync(buttonDef.src),
@@ -38,6 +43,7 @@ import { buttonDefinitions, IMAGES_HOST } from "./buttonsDef";
   }
 
   console.log(html);
+  updateButtonConfig(buttonDefinitions);
 })();
 
 async function downloadFile(url: string, filename: string) {
