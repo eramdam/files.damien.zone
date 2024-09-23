@@ -8,7 +8,6 @@
   --font-main: "Hack", monospace;
   --font-monospace: "Hack", monospace;
   --font-secondary: "Atkinson Hyperlegible", monospace;
-  --font-scale: 1em;
 }
 
 /* colors */
@@ -44,7 +43,7 @@
 
 body {
   font-family: var(--font-secondary);
-  font-size: var(--font-scale);
+  font-size: 1.125rem;
   margin: auto;
   padding: 20px;
   max-width: var(--width);
