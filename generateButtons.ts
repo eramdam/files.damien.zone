@@ -34,9 +34,9 @@ import {
       );
       imageSrc = imageSrc.replace("./public/", "/");
     }
-    buttonHtml += `<img class="pixel" loading="lazy" src="${IMAGES_HOST}${imageSrc}" title="${buttonDef.name}" alt="${buttonDef.name}" />`;
+    buttonHtml += `<img class="pixel" decoding="async" loading="lazy" src="${IMAGES_HOST}${imageSrc}" title="${buttonDef.name}" alt="${buttonDef.name}" />`;
     if (buttonDef.link) {
-      buttonHtml = `<a href="${buttonDef.link}" target="_blank" rel="noreferrer noopener" title="${buttonDef.name}">${buttonHtml}</a>`;
+      buttonHtml = `<a href="${buttonDef.link}" target="_blank" rel="noopener" title="${buttonDef.name}">${buttonHtml}</a>`;
     }
 
     html += buttonHtml;
