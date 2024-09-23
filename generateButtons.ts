@@ -1,11 +1,10 @@
-import { URL } from "url";
+import assert from "assert";
 import fs from "node:fs";
 import path from "node:path";
-import slug from "slug";
-import { finished } from "stream/promises";
 import { Readable } from "stream";
-import assert from "assert";
-import { buttonDefinitions, IMAGE_ROOT } from "./buttonsDef";
+import { finished } from "stream/promises";
+import { URL } from "url";
+import { buttonDefinitions, IMAGES_HOST } from "./buttonsDef";
 
 (async () => {
   if (!fs.existsSync("./public/buttons")) {
@@ -28,10 +27,11 @@ import { buttonDefinitions, IMAGE_ROOT } from "./buttonsDef";
         fs.existsSync(buttonDef.src),
         `There is no file for ${buttonDef.src}`
       );
+      imageSrc = imageSrc.replace("./public/", "/");
     }
-    buttonHtml += `<img class="pixel" loading="lazy" src="${IMAGE_ROOT}${imageSrc}" title="${buttonDef.name}" alt="${buttonDef.name}" />`;
+    buttonHtml += `<img class="pixel" loading="lazy" src="${IMAGES_HOST}${imageSrc}" title="${buttonDef.name}" alt="${buttonDef.name}" />`;
     if (buttonDef.link) {
-      buttonHtml += `<a href="${buttonDef.link}" target="_blank" rel="noreferrer noopener" title="${buttonDef.name}">${buttonHtml}</a>`;
+      buttonHtml = `<a href="${buttonDef.link}" target="_blank" rel="noreferrer noopener" title="${buttonDef.name}">${buttonHtml}</a>`;
     }
 
     html += buttonHtml;

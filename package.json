@@ -17,9 +17,5 @@
     "node-html-parser": "^6.1.13",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "@types/slug": "^5.0.9",
-    "slug": "^9.1.0"
   }
 }
