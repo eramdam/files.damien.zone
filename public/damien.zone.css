@@ -324,3 +324,8 @@ figcaption {
     justify-content: center;
   }
 }
+
+.eggbug-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
