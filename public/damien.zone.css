@@ -306,3 +306,10 @@ figcaption {
   background-color: var(--link-color) !important;
   height: 26px !important;
 }
+
+.page.links main .buttons {
+  line-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
