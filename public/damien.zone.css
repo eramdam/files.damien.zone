@@ -291,6 +291,12 @@ figcaption {
   width: 400px !important;
 }
 
+@media (max-width: 480px) {
+  #myWebRing {
+    width: 300px !important;
+  }
+}
+
 #myWebRing img {
   display: none;
 }
@@ -311,4 +317,10 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+@media (max-width: 480px) {
+  .page.links main .buttons {
+    justify-content: center;
+  }
 }
