@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsx server.ts"
+    "start": "tsx ./server.ts",
+    "grab-buttons": "tsx ./generateButtons.ts"
   },
   "keywords": [],
   "author": "",
