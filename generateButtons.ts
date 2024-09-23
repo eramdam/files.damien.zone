@@ -42,6 +42,7 @@ import {
     html += buttonHtml;
   }
 
+  html = `<div class="buttons">${html}</div>`;
   console.log(html);
   updateButtonConfig(
     buttonDefinitions.toSorted((a, b) => {
