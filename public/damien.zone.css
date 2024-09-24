@@ -331,6 +331,10 @@ figcaption {
   background-repeat: no-repeat;
 }
 
+#myWebRing b {
+  color: inherit !important;
+}
+
 #myWebRing > div:last-child {
   background-color: var(--link-color) !important;
   height: 26px !important;
