@@ -248,9 +248,7 @@ footer p {
   image-rendering: pixelated;
 }
 
-.eggbug-button {
-  vertical-align: middle;
-}
+/* images with captions */
 
 .rehype-figure {
   text-align: center;
@@ -279,6 +277,32 @@ figcaption {
   width: 16px;
   height: 16px;
 }
+
+/* Links / buttons stuff */
+
+.page.links main .buttons {
+  line-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+@media (max-width: 480px) {
+  .page.links main .buttons {
+    justify-content: center;
+  }
+}
+
+.eggbug-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.eggbug-button {
+  vertical-align: middle;
+}
+
+/* Webring widget */
 
 #myWebRing {
   margin: 10px auto;
@@ -310,22 +334,4 @@ figcaption {
 #myWebRing > div:last-child {
   background-color: var(--link-color) !important;
   height: 26px !important;
-}
-
-.page.links main .buttons {
-  line-height: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-@media (max-width: 480px) {
-  .page.links main .buttons {
-    justify-content: center;
-  }
-}
-
-.eggbug-buttons {
-  text-align: center;
-  margin: 20px 0;
 }
