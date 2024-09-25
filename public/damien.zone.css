@@ -302,6 +302,20 @@ figcaption {
   vertical-align: middle;
 }
 
+.buttons-mybutton-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  gap: 4px;
+}
+
+.buttons-mybutton {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Webring widget */
 
 #myWebRing {
