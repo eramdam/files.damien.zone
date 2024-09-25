@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsx ./scripts/bear-hot-reload/server.ts",
+    "css": "tsx ./scripts/bear-hot-reload/server.ts",
     "make-buttons": "tsx ./scripts/buttons/generateButtons.ts"
   },
   "keywords": [],

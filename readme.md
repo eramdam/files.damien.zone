@@ -12,7 +12,7 @@ See more details/explanation here https://damien.zone/hacking-together-a-local-c
 
 0. `npm install`
 1. Edit `./scripts/bear-hot-reload/server.ts` so `BEAR_BLOG_URL` and `CSS_FILE` match your bearblog's URL/css filename.
-2. `npm run start`
+2. `npm run css`
 3. open https://localhost:3000 in your browser
 
 ## a quick way to generate the HTML for the buttons on my [links](https://damien.zone/links) page
@@ -27,13 +27,13 @@ See more details/explanation here https://damien.zone/hacking-together-a-local-c
   "buttons": [
     {
       // the target of the link (can be null if the button isn't meant to link anywhere)
-      "link": "https://auratriolo.com/blog/",
+      "link": "https://damien.zone",
       // will be used as the alt/title attribute on the button
-      "name": "Aura!",
-      // either a local path OR a remote one (will be fetched + updated after running the script)
-      "src": "./public/buttons/aura-pixelbanner.gif",
+      "name": "Damien Erambert",
+      // either a local OR a remote path (will be fetched + updated after running the script)
+      "src": "./public/buttons/damiendotzone.gif",
       // final filename for the button
-      "filename": "aura-pixelbanner.gif",
+      "filename": "damiendotzone.gif",
     },
   ],
 }
