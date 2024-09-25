@@ -25,6 +25,12 @@
       "src": "./public/buttons/cdromjournal.png"
     },
     {
+      "link": "https://cereza.zone/",
+      "name": "cereza.zone",
+      "src": "./public/buttons/cereza-88x31.gif",
+      "filename": "cereza-88x31.gif"
+    },
+    {
       "link": "https://blog.radicaldream.land/",
       "name": "Dispatch from the Radical Dreamland",
       "src": "./public/buttons/dispatchblog-banner.gif",
