@@ -39,11 +39,12 @@ See more details/explanation here https://damien.zone/hacking-together-a-local-c
 }
 ```
 
-2. `npm run make-buttons` which will:
+2. `npm run make-buttons` a first time, which will:
 
 - download the buttons and update the `src` field with the local file path
 - re-order the buttons by alphabetical order
-- generate an HTML snippet with the buttons
+
+3. `npm run make-buttons` a second time. Copy the HTML code logged into the console
 
 # disclaimer
 
