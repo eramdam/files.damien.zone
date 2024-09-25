@@ -78,6 +78,12 @@
       "filename": "nickyflowers.gif"
     },
     {
+      "link": "https://platinumtulip.garden/",
+      "name": "platinumtulip",
+      "src": "./public/buttons/tulip88x31.gif",
+      "filename": "tulip88x31.gif"
+    },
+    {
       "link": "https://shadenexus.com/",
       "name": "Shade Nexus",
       "src": "./public/buttons/shadenexus.png",
