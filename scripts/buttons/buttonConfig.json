@@ -72,6 +72,12 @@
       "filename": "renkotsuban.gif"
     },
     {
+      "link": "https://naidje.com/",
+      "name": "Naidje's Page",
+      "src": "./public/buttons/naidje88x31.png",
+      "filename": "naidje88x31.png"
+    },
+    {
       "link": "https://nickyflowers.com/",
       "name": "Nicky Flowers' Web Crevice",
       "src": "./public/buttons/nickyflowers.gif",
