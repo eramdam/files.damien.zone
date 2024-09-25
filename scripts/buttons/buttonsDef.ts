@@ -16,7 +16,7 @@ export const buttonDefinitions = buttonsJson.buttons as ButtonDef[];
 
 export function updateButtonConfig(buttons: ButtonDef[]) {
   return fs.writeFileSync(
-    "./buttonConfig.json",
+    "./scripts/buttons/buttonConfig.json",
     JSON.stringify(
       {
         host: IMAGES_HOST,
