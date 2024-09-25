@@ -58,7 +58,9 @@ async function downloadFile(url: string, filename: string) {
   // @ts-expect-error too lazy to fix that thing, dude
   await finished(Readable.fromWeb(res.body!).pipe(fileStream));
 
-  return destination.replace(__dirname, "").replace("/public", "");
+  const rootDirname = __dirname.replace("scripts/buttons", "");
+
+  return destination.replace(rootDirname, "").replace("public/", "/");
 }
 
 function getFilenameFromURL(url: URL) {
