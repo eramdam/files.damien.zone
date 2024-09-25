@@ -4,6 +4,9 @@ import liveServer from "live-server";
 import fs from "node:fs";
 import path from "node:path";
 
+const BEAR_BLOG_URL = "https://damien.zone";
+const CSS_FILE = "damien.zone.css";
+
 const fastify = Fastify();
 
 const INJECTED_CODE = fs
@@ -17,7 +20,7 @@ liveServer.start({
 });
 
 fastify.get("*", async (request, reply) => {
-  const finalDestination = new URL(request.url, "https://damien.zone");
+  const finalDestination = new URL(request.url, BEAR_BLOG_URL);
   const htmlRes = await fetch(finalDestination);
   const htmlPayload = await htmlRes.text();
   const parsedPage = parse(htmlPayload);
@@ -28,14 +31,14 @@ fastify.get("*", async (request, reply) => {
 
   parsedPage.querySelectorAll("link[rel=stylesheet]").forEach((s) => {
     if (s.getAttribute("href")?.startsWith("/")) {
-      s.setAttribute("href", `https://damien.zone${s.getAttribute("href")}`);
+      s.setAttribute("href", `${BEAR_BLOG_URL}${s.getAttribute("href")}`);
     }
   });
 
   parsedPage.querySelector("head")?.insertAdjacentHTML(
     "beforeend",
     `
-  <link href="http://127.0.0.1:8181/damien.zone.css" rel="stylesheet" />  
+  <link href="http://127.0.0.1:8181/${CSS_FILE}" rel="stylesheet" />  
   ${INJECTED_CODE}
   `
   );
