@@ -281,16 +281,13 @@ figcaption {
 /* Links / buttons stuff */
 
 .page.links main .buttons {
-  line-height: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+  text-wrap: balance;
+  text-align: center;
+  line-height: 20px;
 }
 
-@media (max-width: 480px) {
-  .page.links main .buttons {
-    justify-content: center;
-  }
+.page.links main .buttons > :is(a, img) {
+  margin: 2px;
 }
 
 .eggbug-buttons {
