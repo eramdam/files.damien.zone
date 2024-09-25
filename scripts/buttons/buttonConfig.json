@@ -31,6 +31,12 @@
       "filename": "cereza-88x31.gif"
     },
     {
+      "link": "http://crouton.net/",
+      "name": "crouton.net",
+      "src": "./public/buttons/crouton.png",
+      "filename": "crouton.png"
+    },
+    {
       "link": "https://blog.radicaldream.land/",
       "name": "Dispatch from the Radical Dreamland",
       "src": "./public/buttons/dispatchblog-banner.gif",

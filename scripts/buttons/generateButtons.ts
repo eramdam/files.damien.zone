@@ -15,6 +15,21 @@ import {
     fs.mkdirSync("./public/buttons");
   }
 
+  // Run once to download/update the button paths
+  await processButtonConfig();
+  updateButtonConfig(
+    buttonDefinitions.toSorted((a, b) => {
+      return a.name.localeCompare(b.name);
+    })
+  );
+
+  // Run a second time to get the final HTML code
+  const html = await processButtonConfig();
+
+  console.log(html);
+})();
+
+async function processButtonConfig() {
   let html = ``;
 
   for (let buttonDef of buttonDefinitions) {
@@ -43,13 +58,8 @@ import {
   }
 
   html = `<div class="buttons">${html}</div>`;
-  console.log(html);
-  updateButtonConfig(
-    buttonDefinitions.toSorted((a, b) => {
-      return a.name.localeCompare(b.name);
-    })
-  );
-})();
+  return html;
+}
 
 async function downloadFile(url: string, filename: string) {
   const res = await fetch(url);
