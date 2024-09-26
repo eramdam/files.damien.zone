@@ -43,6 +43,12 @@
       "filename": "dispatchblog-banner.gif"
     },
     {
+      "link": "https://gumdisease.neocities.org/",
+      "name": "gumdisease",
+      "src": "./public/buttons/gumblinkystamp3.gif",
+      "filename": "gumblinkystamp3.gif"
+    },
+    {
       "link": null,
       "name": "I was on cohost",
       "src": "./public/buttons/i-was-on-cohost.gif"
