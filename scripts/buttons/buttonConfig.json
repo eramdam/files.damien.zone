@@ -138,6 +138,12 @@
       "filename": "qcq.png"
     },
     {
+      "link": "https://sharkaeopteryx.neocities.org/",
+      "name": "sharkaeopteryx",
+      "src": "./public/buttons/shark-button.png",
+      "filename": "shark-button.png"
+    },
+    {
       "link": "https://blog.someplace-else.xyz/",
       "name": "someplace elsewhere",
       "src": "./public/buttons/elsewhere.gif"
