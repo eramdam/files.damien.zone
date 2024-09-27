@@ -158,6 +158,12 @@
       "name": "wavebeem.com",
       "src": "./public/buttons/wavebeem.gif",
       "filename": "wavebeem.gif"
+    },
+    {
+      "link": "https://wyx.gay",
+      "name": "wyx.gay",
+      "src": "./public/buttons/wyx.gay.png",
+      "filename": "wyx.gay.png"
     }
   ]
 }
