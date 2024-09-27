@@ -55,6 +55,12 @@
       "filename": "dispatchblog-banner.gif"
     },
     {
+      "link": "https://ewie.online/",
+      "name": "evie on→line",
+      "src": "./public/buttons/88x31-evie.png",
+      "filename": "88x31-evie.png"
+    },
+    {
       "link": "https://gumdisease.neocities.org/",
       "name": "gumdisease",
       "src": "./public/buttons/gumblinkystamp3.gif",
