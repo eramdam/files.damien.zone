@@ -120,6 +120,12 @@
       "filename": "nickyflowers.gif"
     },
     {
+      "link": "https://pixelde.su",
+      "name": "pixeldesu",
+      "src": "./public/buttons/pixeldesu.png",
+      "filename": "pixeldesu.png"
+    },
+    {
       "link": "https://platinumtulip.garden/",
       "name": "platinumtulip",
       "src": "./public/buttons/tulip88x31.gif",
