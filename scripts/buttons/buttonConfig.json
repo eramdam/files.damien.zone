@@ -132,16 +132,16 @@
       "filename": "tulip88x31.gif"
     },
     {
-      "link": "https://shadenexus.com/",
-      "name": "Shade Nexus",
-      "src": "./public/buttons/shadenexus.png",
-      "filename": "shadenexus.png"
-    },
-    {
       "link": "https://queercomputerclub.ca/",
       "name": "Queer Computer Club",
       "src": "./public/buttons/qcq.png",
       "filename": "qcq.png"
+    },
+    {
+      "link": "https://shadenexus.com/",
+      "name": "Shade Nexus",
+      "src": "./public/buttons/shadenexus.png",
+      "filename": "shadenexus.png"
     },
     {
       "link": "https://sharkaeopteryx.neocities.org/",
