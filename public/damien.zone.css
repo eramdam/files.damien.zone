@@ -350,3 +350,29 @@ figcaption {
   background-color: var(--link-color) !important;
   height: 26px !important;
 }
+
+/* Gallery stuff */
+.gallery ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  grid-gap: 8px;
+  padding: 20px 0;
+  list-style: none;
+}
+.gallery.col-4 ul {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery.col-2 ul {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery li {
+  /* position: relative; */
+  /* flex-basis: calc(50% - 20px); */
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
