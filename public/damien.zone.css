@@ -368,11 +368,26 @@ figcaption {
   }
 }
 
-.gallery.col-4 ul {
-  grid-template-columns: repeat(4, 1fr);
+.big-image + .gallery ul {
+  margin: 0;
+  padding-top: 0;
 }
-.gallery.col-2 ul {
+
+.gallery.col-1 ul,
+.col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.gallery.col-2 ul,
+.col-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+.gallery.col-3 ul,
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery.col-4 ul,
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .gallery li {
