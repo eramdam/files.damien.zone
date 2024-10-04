@@ -108,6 +108,12 @@
       "filename": "lexfeathers88x31.gif"
     },
     {
+      "link": "https://lizard.tools/",
+      "name": "lizard.tools",
+      "src": "./public/buttons/lizards-tools.png",
+      "filename": "lizards-tools.png"
+    },
+    {
       "link": "https://meow.garden/",
       "name": "meow.garden",
       "src": "./public/buttons/meowgarden-88x31.png",
@@ -206,6 +212,12 @@
       "name": "wavebeem.com",
       "src": "./public/buttons/wavebeem.gif",
       "filename": "wavebeem.gif"
+    },
+    {
+      "link": "https://websiteleague.org",
+      "name": "Website League",
+      "src": "./public/buttons/wl-88-31.png",
+      "filename": "wl-88-31.png"
     },
     {
       "link": "https://wyx.gay",
