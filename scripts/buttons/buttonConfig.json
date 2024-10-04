@@ -14,6 +14,12 @@
       "filename": "aurahack.gif"
     },
     {
+      "link": "https://www.youtube.com/watch?v=FtutLA63Cp8",
+      "name": "Bad Apple",
+      "src": "./public/buttons/badapple.gif",
+      "filename": "badapple.gif"
+    },
+    {
       "link": "https://alyaza.neocities.org/",
       "name": "birzeblog",
       "src": "./public/buttons/birzeblog.gif",
@@ -53,6 +59,12 @@
       "name": "Dispatch from the Radical Dreamland",
       "src": "./public/buttons/dispatchblog-banner.gif",
       "filename": "dispatchblog-banner.gif"
+    },
+    {
+      "link": "https://estrogenandspite.neocities.org/",
+      "name": "Estrogen and Spite",
+      "src": "./public/buttons/estrogenandspite.png",
+      "filename": "estrogenandspite.png"
     },
     {
       "link": "https://ewie.online/",
@@ -108,10 +120,22 @@
       "filename": "renkotsuban.gif"
     },
     {
+      "link": "https://moonbase.lgbt/",
+      "name": "Moonbase Dot LGBT",
+      "src": "./public/buttons/moonbase.gif",
+      "filename": "moonbase.gif"
+    },
+    {
       "link": "https://naidje.com/",
       "name": "Naidje's Page",
       "src": "./public/buttons/naidje88x31.png",
       "filename": "naidje88x31.png"
+    },
+    {
+      "link": "https://moonbase.lgbt/blog/nes-pictionary-in-memoriam/",
+      "name": "NES Pictionary",
+      "src": "./public/buttons/nes-pictionary.png",
+      "filename": "nes-pictionary.png"
     },
     {
       "link": "https://nickyflowers.com/",
