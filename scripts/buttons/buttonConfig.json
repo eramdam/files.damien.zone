@@ -126,6 +126,12 @@
       "filename": "moonbase.gif"
     },
     {
+      "link": "https://moonlitdecadence.neocities.org/",
+      "name": "moonlit decadence",
+      "src": "./public/buttons/88x31-moonlit.png",
+      "filename": "88x31-moonlit.png"
+    },
+    {
       "link": "https://naidje.com/",
       "name": "Naidje's Page",
       "src": "./public/buttons/naidje88x31.png",
