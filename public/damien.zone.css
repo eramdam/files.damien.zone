@@ -151,13 +151,30 @@ footer > :not(#footer-directive) {
   text-decoration: none;
 }
 
-.title h1 {
+header .title h1 {
   font-size: 1.4em;
   padding: 5px 10px;
   background: var(--heading-color);
   color: var(--background-color);
-  display: inline-block;
   font-weight: 600;
+  border-radius: 5px;
+}
+
+header .title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.title::before {
+  margin-right: 15px;
+  content: "";
+  display: block;
+  background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-square.webp")
+    no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999999px;
 }
 
 .inline {
