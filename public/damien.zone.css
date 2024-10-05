@@ -8,6 +8,7 @@
   --font-main: "Hack", monospace;
   --font-monospace: "Hack", monospace;
   --font-secondary: "Atkinson Hyperlegible", monospace;
+  --border-radius: 6px;
 }
 
 /* colors */
@@ -85,7 +86,7 @@ main {
   border-width: 6px;
   border-color: var(--link-color);
   border-style: ridge;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 nav a {
@@ -157,7 +158,7 @@ header .title h1 {
   background: var(--heading-color);
   color: var(--background-color);
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: calc(var(--border-radius) * 2);
 }
 
 header .title {
@@ -339,7 +340,7 @@ figcaption {
   border-width: 4px;
   border-color: var(--link-color);
   border-style: ridge;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   width: 400px !important;
 }
 
