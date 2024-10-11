@@ -9,6 +9,8 @@
     const script = document.createElement("script");
     script.setAttribute("data-chirpy-domain", "damien.zone");
     script.setAttribute("src", "https://chirpy.dev/bootstrapper.js");
-    document.querySelector("body.post > main").insertAdjacentElement(script);
+    document
+      .querySelector("body.post > main")
+      .insertAdjacentElement("beforeend", script);
   }
 })();
