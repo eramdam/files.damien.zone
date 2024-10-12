@@ -79,6 +79,12 @@
       "filename": "gumblinkystamp3.gif"
     },
     {
+      "link": "https://nex-3.com",
+      "name": "House of Nettles",
+      "src": "./public/buttons/house-of-nettles.gif",
+      "filename": "house-of-nettles.gif"
+    },
+    {
       "link": null,
       "name": "I was on cohost",
       "src": "./public/buttons/i-was-on-cohost.gif"
