@@ -14,6 +14,9 @@
   );
 
   const script = document.createElement("script");
-  script.setAttribute("src", "https://comments.damien.zone/comentario.js");
+  script.setAttribute(
+    "src",
+    "https://comments.friendsofeggbug.org/comentario.js"
+  );
   mainPost.insertAdjacentElement("beforeend", script);
 })();
