@@ -1,7 +1,7 @@
 (() => {
   if (
     window.location.host !== "damien.zone" &&
-    window.location.host !== "127.0.0.1"
+    window.location.host !== "127.0.0.1:3000"
   ) {
     return;
   }
