@@ -499,7 +499,7 @@ body main .comentario-root.comentario-root {
     }
   }
 
-  /* Hide the yellow "children collapse" thing. */
+  /* Disable "children collapse" toggler. */
   .comentario-card-expand-toggler {
     pointer-events: none;
   }
