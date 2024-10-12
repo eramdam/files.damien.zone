@@ -436,6 +436,7 @@ body main .comentario-root.comentario-root {
   /* Remove background behind composer wrapper */
   --cmntr-bg: transparent;
 
+  /* Tweak color in light mode */
   @media (prefers-color-scheme: light) {
     --cmntr-bg-shade: white;
   }
@@ -466,7 +467,6 @@ body main .comentario-root.comentario-root {
   textarea {
     border: 1px solid #959595;
   }
-
   @media (prefers-color-scheme: dark) {
     textarea.comentario-touched:invalid:empty,
     .comentario-add-comment-host:not(.comentario-editor-inserted),
@@ -527,6 +527,7 @@ body main .comentario-root.comentario-root {
     display: none;
   }
 
+  /* Make badge more legible in dark mode */
   @media (prefers-color-scheme: dark) {
     .comentario-badge {
       color: black;
