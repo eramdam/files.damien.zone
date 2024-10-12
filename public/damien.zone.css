@@ -501,12 +501,12 @@ body main .comentario-root.comentario-root {
 
   /* Hide the yellow "children collapse" thing. */
   .comentario-card-expand-toggler {
-    display: none;
+    pointer-events: none;
   }
 
   /* Hide colored borders. */
   [class*="comentario-border-"] {
-    border-left: none !important;
+    border-left-color: transparent !important;
   }
 
   /* Hide background behind toolbar in preview mode. */
