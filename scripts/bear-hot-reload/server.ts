@@ -25,15 +25,17 @@ fastify.get("*", async (request, reply) => {
   const htmlPayload = await htmlRes.text();
   const parsedPage = parse(htmlPayload);
 
-  parsedPage.querySelectorAll("style").forEach((s) => {
+  parsedPage.querySelectorAll("style").forEach((s: HTMLStyleElement) => {
     s.remove();
   });
 
-  parsedPage.querySelectorAll("link[rel=stylesheet]").forEach((s) => {
-    if (s.getAttribute("href")?.startsWith("/")) {
-      s.setAttribute("href", `${BEAR_BLOG_URL}${s.getAttribute("href")}`);
-    }
-  });
+  parsedPage
+    .querySelectorAll("link[rel=stylesheet]")
+    .forEach((s: HTMLLinkElement) => {
+      if (s.getAttribute("href")?.startsWith("/")) {
+        s.setAttribute("href", `${BEAR_BLOG_URL}${s.getAttribute("href")}`);
+      }
+    });
 
   parsedPage.querySelector("head")?.insertAdjacentHTML(
     "beforeend",
