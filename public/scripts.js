@@ -1,4 +1,7 @@
 (() => {
+  if (window.location.hos !== "damien.zone") {
+    return;
+  }
   const mainPost = document.querySelector("body.post > main");
   // If we're not on a post page, nothing to do.
   if (!mainPost) {
