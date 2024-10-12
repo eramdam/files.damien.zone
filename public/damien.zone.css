@@ -505,7 +505,7 @@ body main .comentario-root.comentario-root {
   }
 
   /* Hide colored borders. */
-  [class*="comentario-border-52"] {
+  [class*="comentario-border-"] {
     border-left: none !important;
   }
 
