@@ -1,5 +1,5 @@
 (() => {
-  if (window.location.hos !== "damien.zone") {
+  if (window.location.host !== "damien.zone") {
     return;
   }
   const mainPost = document.querySelector("body.post > main");
