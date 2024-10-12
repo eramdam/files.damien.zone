@@ -1,6 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap"); */
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css");
+
+/* Extra styles */
 @import url("./pygments.css");
 
 /* common variables */
@@ -74,10 +76,10 @@ a {
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
   text-decoration-color: var(--link-color);
-}
 
-a:hover {
-  text-decoration-thickness: 3px;
+  &:hover {
+    text-decoration-thickness: 3px;
+  }
 }
 
 main {
@@ -427,4 +429,147 @@ figcaption {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Comentario overrides */
+body main .comentario-root.comentario-root {
+  /* Remove background behind composer wrapper */
+  --cmntr-bg: transparent;
+
+  @media (prefers-color-scheme: light) {
+    --cmntr-bg-shade: white;
+  }
+
+  /* Theme-specific: Remove background behind `code` element inside code blocks */
+  pre code {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  /* Theme-specific: Remove border around blockquote */
+  blockquote {
+    border-top: transparent;
+    border-bottom: transparent;
+  }
+
+  /* Add quotes around blockquote content */
+  blockquote p:before {
+    content: open-quote;
+  }
+  blockquote p:after {
+    content: close-quote;
+  }
+
+  /* Remove red border when textarea is invalid but still empty */
+  textarea.comentario-touched:invalid:empty,
+  .comentario-add-comment-host:not(.comentario-editor-inserted),
+  textarea {
+    border: 1px solid #959595;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    textarea.comentario-touched:invalid:empty,
+    .comentario-add-comment-host:not(.comentario-editor-inserted),
+    textarea {
+      border: 1px solid #4a4a4a;
+    }
+  }
+
+  /* 
+    Only transition the color-related properties of the textarea.
+    Prevents the resizing of the textarea from feeling "laggy".
+   */
+  textarea {
+    transition-property: box-shadow, color, background-color, border,
+      border-color;
+  }
+
+  /* Tweak background color of textarea */
+  .comentario-add-comment-host:not(.comentario-editor-inserted),
+  textarea {
+    --cmntr-input-bg: white;
+    --cmntr-bg: white;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .comentario-add-comment-host:not(.comentario-editor-inserted),
+    textarea {
+      --cmntr-input-bg: black;
+      --cmntr-bg: black;
+    }
+  }
+
+  /* Hide the yellow "children collapse" thing. */
+  .comentario-card-expand-toggler {
+    display: none;
+  }
+
+  /* Hide colored borders. */
+  [class*="comentario-border-52"] {
+    border-left: none !important;
+  }
+
+  /* Hide background behind toolbar in preview mode. */
+  .comentario-toolbar.comentario-disabled:has(
+      ~ .comentario-comment-editor-preview
+    ) {
+    background-color: transparent;
+  }
+
+  /* Make badges more legible */
+  .comentario-badge {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  /* Hide moderator badge */
+  .comentario-badge-moderator {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .comentario-badge {
+      color: black;
+    }
+  }
+
+  /* Make author links fit nicer with the rest of the style */
+  .comentario-card a.comentario-name {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: currentColor;
+    }
+  }
+
+  /* Make links in comments less "aggressive" */
+  .comentario-card-body a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: currentColor;
+
+    &:hover {
+      text-decoration-thickness: 2px;
+      color: currentColor;
+    }
+  }
+
+  /* Use site link color for "watermark" */
+  .comentario-footer {
+    --cmntr-link-color: var(--link-color);
+    --cmntr-link-hover-color: color-mix(in srgb, black 20%, var(--link-color));
+  }
+
+  /* Hide sorting buttons
+    TODO: show it again and find a way to make the buttons not ugly
+  */
+  .comentario-sort-bar {
+    display: none;
+  }
 }
