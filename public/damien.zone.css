@@ -1,6 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css");
+@import url("./pygments.css");
 
 /* common variables */
 :root {
@@ -185,16 +186,26 @@ header .title {
 .highlight,
 .code {
   padding: 1px 15px;
-  background-color: var(--code-background-color);
-  color: var(--code-color);
   border-radius: 3px;
   margin-block-start: 1em;
   margin-block-end: 1em;
   overflow-x: auto;
 }
 
+.code {
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+}
+
 .highlight {
-  /* border-left: 5px solid var(--heading-color); */
+  border: 1px solid var(--link-color);
+  border-radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    border: 1px solid color-mix(in srgb, black 40%, var(--link-color));
+  }
 }
 
 /* blog post list */
