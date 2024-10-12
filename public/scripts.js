@@ -1,5 +1,8 @@
 (() => {
-  if (window.location.host !== "damien.zone") {
+  if (
+    window.location.host !== "damien.zone" &&
+    window.location.host !== "127.0.0.1"
+  ) {
     return;
   }
   const mainPost = document.querySelector("body.post > main");
