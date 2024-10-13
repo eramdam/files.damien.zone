@@ -133,13 +133,21 @@ code {
 }
 
 blockquote {
-  border-top: 1px solid var(--heading-color);
-  border-bottom: 1px solid var(--heading-color);
+  border-left: 2px solid
+    color-mix(in srgb, var(--text-color) 75%, var(--heading-color));
+  border-left-style: outset;
   color: var(--text-color);
-  padding: 20px;
+  padding: 1px 20px;
   font-style: italic;
   margin-left: 0px;
   margin-right: 0px;
+
+  & p:before {
+    content: open-quote;
+  }
+  & p:after {
+    content: close-quote;
+  }
 }
 
 footer {
