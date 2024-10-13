@@ -142,10 +142,10 @@ blockquote {
   margin-left: 0px;
   margin-right: 0px;
 
-  & p:before {
+  & p:first-of-type:before {
     content: open-quote;
   }
-  & p:after {
+  & p:last-of-type:after {
     content: close-quote;
   }
 }
@@ -462,10 +462,10 @@ body main .comentario-root.comentario-root {
   }
 
   /* Add quotes around blockquote content */
-  blockquote p:before {
+  blockquote p:first-of-type:before {
     content: open-quote;
   }
-  blockquote p:after {
+  blockquote p:last-of-type:after {
     content: close-quote;
   }
 
