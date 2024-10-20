@@ -84,12 +84,16 @@ a {
 
 main {
   margin-top: 40px;
-  margin-bottom: 20px;
-  padding: 20px 30px;
-  border-width: 6px;
+  padding: 0 30px;
+  padding-bottom: 20px;
+  border-width: 3px;
   border-color: var(--link-color);
   border-style: ridge;
-  border-radius: var(--border-radius);
+  border-radius: 0;
+}
+
+main small .tags {
+  display: none;
 }
 
 nav a {
