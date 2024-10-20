@@ -6,6 +6,7 @@ import path from "node:path";
 
 const BEAR_BLOG_URL = "https://damien.zone";
 const CSS_FILE = "damien.zone.css";
+const SCRIPT_FILE = "scripts.js";
 
 const fastify = Fastify();
 
@@ -37,13 +38,25 @@ fastify.get("*", async (request, reply) => {
       }
     });
 
-  parsedPage.querySelector("head")?.insertAdjacentHTML(
-    "beforeend",
-    `
-  <link href="http://127.0.0.1:8181/${CSS_FILE}" rel="stylesheet" />  
-  ${INJECTED_CODE}
-  `
-  );
+  parsedPage.querySelectorAll("script").forEach((s: HTMLScriptElement) => {
+    if (s.getAttribute("src")?.endsWith(SCRIPT_FILE)) {
+      s.remove();
+    }
+  });
+
+  parsedPage
+    .querySelector("head")
+    ?.insertAdjacentHTML(
+      "beforeend",
+      `<link href="http://127.0.0.1:8181/${CSS_FILE}" rel="stylesheet" />  ${INJECTED_CODE}`
+    );
+
+  parsedPage
+    .querySelector("footer")
+    ?.insertAdjacentHTML(
+      "beforeend",
+      `<script src="http://127.0.0.1:8181/${SCRIPT_FILE}" type="text/javascript" />`
+    );
 
   const finalPayload = parsedPage.toString();
 
