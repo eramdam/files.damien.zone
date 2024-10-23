@@ -26,6 +26,12 @@
       "filename": "birzeblog.gif"
     },
     {
+      "link": "https://brianna.town",
+      "name": "Brianna Townsend",
+      "src": "./public/buttons/briannatown.gif",
+      "filename": "briannatown.gif"
+    },
+    {
       "link": "https://cdrom.ca/",
       "name": "CD-ROM journal",
       "src": "./public/buttons/cdromjournal.png"
