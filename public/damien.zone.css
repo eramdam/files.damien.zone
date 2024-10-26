@@ -8,7 +8,7 @@
 /* common variables */
 :root {
   --width: 80ch;
-  --font-main: "Hack", monospace;
+  --font-headings: "Hack", monospace;
   --font-monospace: "Hack", monospace;
   --font-secondary: "Atkinson Hyperlegible", monospace;
   --border-radius: 6px;
@@ -65,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-main);
+  font-family: var(--font-headings);
   color: var(--heading-color);
 }
 
@@ -360,7 +360,7 @@ figcaption {
 
 #myWebRing {
   margin: 10px auto;
-  font-family: var(--font-main) !important;
+  font-family: var(--font-headings) !important;
   background: transparent !important;
   border-width: 4px;
   border-color: var(--link-color);
