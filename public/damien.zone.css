@@ -1,6 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 
 /* Extra styles */
 @import url("./pygments.css");
@@ -8,9 +9,9 @@
 /* common variables */
 :root {
   --width: 80ch;
-  --font-headings: "Hack", monospace;
+  --font-headings: "Young Serif", sans-serif;
   --font-monospace: "Hack", monospace;
-  --font-secondary: "Atkinson Hyperlegible", monospace;
+  --font-secondary: "Atkinson Hyperlegible", sans-serif;
   --border-radius: 6px;
 }
 
@@ -18,9 +19,8 @@
 :root {
   --color-base: hsl(343, 81%, 40%);
   --background-color: #222129;
-  --heading-color: var(--color-base);
-  --text-color: #ffa86a;
   --text-color: #d1d5db;
+  --heading-color: color-mix(in srgb, white 80%, var(--text-color));
   --link-color: var(--color-base);
   --visited-color: color-mix(in srgb, var(--text-color) 90%, var(--color-base));
   --code-background-color: hsl(343, 20%, 20%);
@@ -31,9 +31,8 @@
   :root {
     --color-base: #be133c;
     --background-color: hsl(0, 0%, 97%);
-    --heading-color: var(--color-base);
-    --text-color: #ffa86a;
     --text-color: #384151;
+    --heading-color: color-mix(in srgb, black 80%, var(--text-color));
     --link-color: var(--color-base);
     --visited-color: color-mix(
       in srgb,
@@ -67,6 +66,7 @@ h5,
 h6 {
   font-family: var(--font-headings);
   color: var(--heading-color);
+  font-weight: normal;
 }
 
 a {
@@ -170,9 +170,9 @@ footer > :not(#footer-directive) {
 header .title h1 {
   font-size: 1.4em;
   padding: 5px 10px;
-  background: var(--heading-color);
+  background: var(--link-color);
   color: var(--background-color);
-  font-weight: 600;
+  font-weight: normal;
   border-radius: calc(var(--border-radius) * 2);
 }
 
@@ -360,7 +360,7 @@ figcaption {
 
 #myWebRing {
   margin: 10px auto;
-  font-family: var(--font-headings) !important;
+  font-family: var(--font-monospace) !important;
   background: transparent !important;
   border-width: 4px;
   border-color: var(--link-color);
