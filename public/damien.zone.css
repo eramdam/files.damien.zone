@@ -9,10 +9,20 @@
 /* common variables */
 :root {
   --width: 80ch;
-  --font-headings: "Young Serif", sans-serif;
   --font-monospace: "Hack", monospace;
   --font-secondary: "Atkinson Hyperlegible", sans-serif;
   --border-radius: 6px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-synthesis: none;
+  font-family: "Young Serif", sans-serif;
+  color: var(--heading-color);
 }
 
 /* colors */
@@ -56,17 +66,6 @@ body {
   overflow-wrap: break-word;
   line-height: 1.5;
   color: var(--text-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-headings);
-  color: var(--heading-color);
-  font-weight: normal;
 }
 
 a {
@@ -172,7 +171,6 @@ header .title h1 {
   padding: 5px 10px;
   background: var(--link-color);
   color: var(--background-color);
-  font-weight: normal;
   border-radius: calc(var(--border-radius) * 2);
 }
 
