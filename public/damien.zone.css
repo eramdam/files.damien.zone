@@ -200,9 +200,6 @@ header .title h1 {
 
 header .title h1,
 header .title::before {
-  /* box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1); */
   filter: drop-shadow(0 10px 10px rgb(0 0 0 / 0.2))
     drop-shadow(0 4px 6px rgb(0 0 0 / 0.1));
 }
