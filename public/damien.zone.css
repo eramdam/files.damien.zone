@@ -21,7 +21,7 @@ h4,
 h5,
 h6 {
   font-synthesis: none;
-  font-family: "Young Serif", sans-serif;
+  font-family: "Young Serif", serif;
   color: var(--heading-color);
 }
 
