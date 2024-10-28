@@ -1,6 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 
 /* Extra styles */
 @import url("./pygments.css");
@@ -8,37 +9,65 @@
 /* common variables */
 :root {
   --width: 80ch;
-  --font-headings: "Hack", monospace;
   --font-monospace: "Hack", monospace;
-  --font-secondary: "Atkinson Hyperlegible", monospace;
+  --font-secondary: "Atkinson Hyperlegible", sans-serif;
   --border-radius: 6px;
 }
 
-/* colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-synthesis: none;
+  font-family: "Young Serif", serif;
+  color: var(--heading-color);
+}
+
 :root {
-  --color-base: hsl(343, 81%, 40%);
-  --background-color: #222129;
-  --heading-color: var(--color-base);
-  --text-color: #ffa86a;
-  --text-color: #d1d5db;
-  --link-color: var(--color-base);
-  --visited-color: color-mix(in srgb, var(--text-color) 90%, var(--color-base));
+  --base-offblack-background: #212028;
+  /* --base-offwhite-background: #fbf3ea; */
+  --base-offwhite-background: hsl(32, 65%, 96%);
+}
+
+/* dark colors */
+:root {
+  --accent-color: hsl(343, 81%, 40%);
+  --offblack-background: var(--base-offblack-background);
+  --offwhite-background: var(--base-offwhite-background);
+  --offwhite-background: color-mix(
+    in srgb,
+    black 10%,
+    var(--base-offwhite-background)
+  );
+  --text-color: var(--offwhite-background);
+  --background-color: var(--offblack-background);
+  --heading-color: color-mix(in srgb, white 80%, var(--text-color));
+  --link-color: var(--base-offwhite-background);
+  --visited-color: color-mix(
+    in srgb,
+    var(--text-color) 90%,
+    var(--accent-color)
+  );
   --code-background-color: hsl(343, 20%, 20%);
   --code-color: #d1d5db;
 }
 
+/* light colors */
 @media (prefers-color-scheme: light) {
   :root {
-    --color-base: #be133c;
-    --background-color: hsl(0, 0%, 97%);
-    --heading-color: var(--color-base);
-    --text-color: #ffa86a;
-    --text-color: #384151;
-    --link-color: var(--color-base);
+    --accent-color: #be133c;
+    --offblack-background: var(--base-offblack-background);
+    --offwhite-background: var(--base-offwhite-background);
+    --background-color: var(--offwhite-background);
+    --text-color: var(--offblack-background);
+    --heading-color: color-mix(in srgb, black 80%, var(--text-color));
+    --link-color: black;
     --visited-color: color-mix(
       in srgb,
       var(--text-color) 90%,
-      var(--color-base)
+      var(--accent-color)
     );
     --code-background-color: #222129;
     --code-color: var(--background-color);
@@ -59,26 +88,20 @@ body {
   color: var(--text-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-headings);
-  color: var(--heading-color);
-}
-
 a {
   color: inherit;
   cursor: pointer;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
-  text-decoration-color: var(--link-color);
+  text-decoration-color: var(--accent-color);
+  transition:
+    text-underline-offset,
+    color 160ms ease;
 
   &:hover {
-    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    color: var(--link-color);
   }
 }
 
@@ -87,7 +110,7 @@ main {
   padding: 0 30px;
   padding-bottom: 20px;
   border-width: 3px;
-  border-color: var(--link-color);
+  border-color: var(--accent-color);
   border-style: ridge;
   border-radius: 0;
 }
@@ -170,27 +193,40 @@ footer > :not(#footer-directive) {
 header .title h1 {
   font-size: 1.4em;
   padding: 5px 10px;
-  background: var(--heading-color);
-  color: var(--background-color);
-  font-weight: 600;
+  background: var(--accent-color);
+  color: var(--base-offwhite-background);
   border-radius: calc(var(--border-radius) * 2);
+}
+
+header .title h1,
+header .title::before {
+  filter: drop-shadow(0 10px 10px rgb(0 0 0 / 0.2))
+    drop-shadow(0 4px 6px rgb(0 0 0 / 0.1));
 }
 
 header .title {
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
+  transition: none;
 }
 
 .title::before {
   margin-right: 15px;
   content: "";
   display: block;
-  background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-square.webp")
-    no-repeat;
+  background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-baguette-transparent-icon.webp");
   background-size: cover;
+  background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  border-radius: 9999999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title::before {
+    background-color: var(--base-offwhite-background);
+    border-radius: 99999999px;
+  }
 }
 
 .inline {
@@ -212,13 +248,13 @@ header .title {
 }
 
 .highlight {
-  border: 1px solid var(--link-color);
+  border: 1px solid var(--accent-color);
   border-radius: 6px;
 }
 
 @media (prefers-color-scheme: dark) {
   .highlight {
-    border: 1px solid color-mix(in srgb, black 40%, var(--link-color));
+    border: 1px solid color-mix(in srgb, black 40%, var(--accent-color));
   }
 }
 
@@ -241,7 +277,7 @@ ul.blog-posts li span {
   flex: 0 0 130px;
 }
 
-ul.blog-posts li a:visited {
+ul.blog-posts li a:visited:not(:hover) {
   color: var(--visited-color);
 }
 
@@ -360,10 +396,10 @@ figcaption {
 
 #myWebRing {
   margin: 10px auto;
-  font-family: var(--font-headings) !important;
+  font-family: var(--font-monospace) !important;
   background: transparent !important;
   border-width: 4px;
-  border-color: var(--link-color);
+  border-color: var(--accent-color);
   border-style: ridge;
   border-radius: var(--border-radius);
   width: 400px !important;
@@ -390,7 +426,7 @@ figcaption {
 }
 
 #myWebRing > div:last-child {
-  background-color: var(--link-color) !important;
+  background-color: var(--accent-color) !important;
   height: 26px !important;
 }
 
@@ -463,6 +499,47 @@ body main .comentario-root.comentario-root {
   blockquote {
     border-top: transparent;
     border-bottom: transparent;
+  }
+
+  /* Theme-specific: Change color of default button */
+  .comentario-btn-tool,
+  .comentario-btn-link {
+    --cmntr-btn-hover-color: color-mix(in srgb, white 24%, var(--accent-color));
+    --cmntr-btn-active-color: color-mix(
+      in srgb,
+      black 30%,
+      var(--accent-color)
+    );
+  }
+  .comentario-btn-link {
+    --cmntr-btn-color: color-mix(in srgb, black 10%, var(--accent-color));
+  }
+
+  /* Theme-specific: Change color of primary button */
+  .comentario-btn-primary {
+    --cmntr-btn-bg: color-mix(in srgb, black 10%, var(--accent-color));
+    --cmntr-btn-hover-bg: color-mix(in srgb, white 24%, var(--cmntr-btn-bg));
+    --cmntr-btn-active-bg: color-mix(in srgb, black 30%, var(--cmntr-btn-bg));
+  }
+
+  /* Theme-specific: Change style of secondary button */
+  .comentario-btn-secondary {
+    --cmntr-btn-bg: color-mix(in srgb, black 10%, var(--accent-color));
+    --cmntr-btn-hover-bg: color-mix(in srgb, white 24%, var(--cmntr-btn-bg));
+    --cmntr-btn-active-bg: color-mix(in srgb, black 30%, var(--cmntr-btn-bg));
+    background-color: transparent;
+    box-shadow: none !important;
+    border: 2px solid var(--cmntr-btn-bg);
+    color: var(--cmntr-btn-bg);
+
+    &:hover {
+      border-color: var(--cmntr-btn-hover-bg);
+      color: white;
+    }
+    &:active {
+      border-color: var(--cmntr-btn-active-bg);
+      color: white;
+    }
   }
 
   /* Add quotes around blockquote content */
@@ -575,8 +652,12 @@ body main .comentario-root.comentario-root {
 
   /* Use site link color for "watermark" */
   .comentario-footer {
-    --cmntr-link-color: var(--link-color);
-    --cmntr-link-hover-color: color-mix(in srgb, black 20%, var(--link-color));
+    --cmntr-link-color: var(--accent-color);
+    --cmntr-link-hover-color: color-mix(
+      in srgb,
+      black 20%,
+      var(--accent-color)
+    );
   }
 
   /* Hide sorting buttons
