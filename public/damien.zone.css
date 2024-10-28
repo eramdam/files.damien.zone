@@ -504,6 +504,47 @@ body main .comentario-root.comentario-root {
     border-bottom: transparent;
   }
 
+  /* Theme-specific: Change color of default button */
+  .comentario-btn-tool,
+  .comentario-btn-link {
+    --cmntr-btn-hover-color: color-mix(in srgb, white 24%, var(--accent-color));
+    --cmntr-btn-active-color: color-mix(
+      in srgb,
+      black 30%,
+      var(--accent-color)
+    );
+  }
+  .comentario-btn-link {
+    --cmntr-btn-color: color-mix(in srgb, black 10%, var(--accent-color));
+  }
+
+  /* Theme-specific: Change color of primary button */
+  .comentario-btn-primary {
+    --cmntr-btn-bg: color-mix(in srgb, black 10%, var(--accent-color));
+    --cmntr-btn-hover-bg: color-mix(in srgb, white 24%, var(--cmntr-btn-bg));
+    --cmntr-btn-active-bg: color-mix(in srgb, black 30%, var(--cmntr-btn-bg));
+  }
+
+  /* Theme-specific: Change style of secondary button */
+  .comentario-btn-secondary {
+    --cmntr-btn-bg: color-mix(in srgb, black 10%, var(--accent-color));
+    --cmntr-btn-hover-bg: color-mix(in srgb, white 24%, var(--cmntr-btn-bg));
+    --cmntr-btn-active-bg: color-mix(in srgb, black 30%, var(--cmntr-btn-bg));
+    background-color: transparent;
+    box-shadow: none !important;
+    border: 2px solid var(--cmntr-btn-bg);
+    color: var(--cmntr-btn-bg);
+
+    &:hover {
+      border-color: var(--cmntr-btn-hover-bg);
+      color: white;
+    }
+    &:active {
+      border-color: var(--cmntr-btn-active-bg);
+      color: white;
+    }
+  }
+
   /* Add quotes around blockquote content */
   blockquote p:first-of-type:before {
     content: open-quote;
