@@ -239,7 +239,7 @@ ul.blog-posts li span {
   flex: 0 0 130px;
 }
 
-ul.blog-posts li a:visited {
+ul.blog-posts li a:visited:not(:hover) {
   color: var(--visited-color);
 }
 
