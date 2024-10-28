@@ -198,6 +198,15 @@ header .title h1 {
   border-radius: calc(var(--border-radius) * 2);
 }
 
+header .title h1,
+header .title::before {
+  /* box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1); */
+  filter: drop-shadow(0 10px 10px rgb(0 0 0 / 0.2))
+    drop-shadow(0 4px 6px rgb(0 0 0 / 0.1));
+}
+
 header .title {
   display: inline-flex;
   align-items: center;
@@ -209,14 +218,18 @@ header .title {
   margin-right: 15px;
   content: "";
   display: block;
-  /* background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-baguette-transparent-icon.webp"); */
-  background-image: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-baguette-icon.webp");
+  background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-baguette-transparent-icon.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--base-offwhite-background);
   width: 40px;
   height: 40px;
-  border-radius: 99999999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title::before {
+    background-color: var(--base-offwhite-background);
+    border-radius: 99999999px;
+  }
 }
 
 .inline {
