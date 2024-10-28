@@ -25,29 +25,49 @@ h6 {
   color: var(--heading-color);
 }
 
-/* colors */
 :root {
-  --color-base: hsl(343, 81%, 40%);
-  --background-color: #222129;
-  --text-color: #d1d5db;
+  --base-offblack-background: #212028;
+  /* --base-offwhite-background: #fbf3ea; */
+  --base-offwhite-background: hsl(32, 65%, 96%);
+}
+
+/* dark colors */
+:root {
+  --accent-color: hsl(343, 81%, 40%);
+  --offblack-background: var(--base-offblack-background);
+  --offwhite-background: var(--base-offwhite-background);
+  --offwhite-background: color-mix(
+    in srgb,
+    black 10%,
+    var(--base-offwhite-background)
+  );
+  --text-color: var(--offwhite-background);
+  --background-color: var(--offblack-background);
   --heading-color: color-mix(in srgb, white 80%, var(--text-color));
-  --link-color: var(--color-base);
-  --visited-color: color-mix(in srgb, var(--text-color) 90%, var(--color-base));
+  --link-color: var(--base-offwhite-background);
+  --visited-color: color-mix(
+    in srgb,
+    var(--text-color) 90%,
+    var(--accent-color)
+  );
   --code-background-color: hsl(343, 20%, 20%);
   --code-color: #d1d5db;
 }
 
+/* light colors */
 @media (prefers-color-scheme: light) {
   :root {
-    --color-base: #be133c;
-    --background-color: hsl(0, 0%, 97%);
-    --text-color: #384151;
+    --accent-color: #be133c;
+    --offblack-background: var(--base-offblack-background);
+    --offwhite-background: var(--base-offwhite-background);
+    --background-color: var(--offwhite-background);
+    --text-color: var(--offblack-background);
     --heading-color: color-mix(in srgb, black 80%, var(--text-color));
-    --link-color: var(--color-base);
+    --link-color: black;
     --visited-color: color-mix(
       in srgb,
       var(--text-color) 90%,
-      var(--color-base)
+      var(--accent-color)
     );
     --code-background-color: #222129;
     --code-color: var(--background-color);
@@ -74,10 +94,14 @@ a {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
-  text-decoration-color: var(--link-color);
+  text-decoration-color: var(--accent-color);
+  transition:
+    text-underline-offset,
+    color 160ms ease;
 
   &:hover {
-    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    color: var(--link-color);
   }
 }
 
@@ -86,7 +110,7 @@ main {
   padding: 0 30px;
   padding-bottom: 20px;
   border-width: 3px;
-  border-color: var(--link-color);
+  border-color: var(--accent-color);
   border-style: ridge;
   border-radius: 0;
 }
@@ -169,26 +193,30 @@ footer > :not(#footer-directive) {
 header .title h1 {
   font-size: 1.4em;
   padding: 5px 10px;
-  background: var(--link-color);
-  color: var(--background-color);
+  background: var(--accent-color);
+  color: var(--base-offwhite-background);
   border-radius: calc(var(--border-radius) * 2);
 }
 
 header .title {
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
+  transition: none;
 }
 
 .title::before {
   margin-right: 15px;
   content: "";
   display: block;
-  background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-square.webp")
-    no-repeat;
+  /* background: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-baguette-transparent-icon.webp"); */
+  background-image: url("https://bear-images.sfo2.cdn.digitaloceanspaces.com/damien/sakamoto-baguette-icon.webp");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--base-offwhite-background);
   width: 40px;
   height: 40px;
-  border-radius: 9999999px;
+  border-radius: 99999999px;
 }
 
 .inline {
@@ -210,13 +238,13 @@ header .title {
 }
 
 .highlight {
-  border: 1px solid var(--link-color);
+  border: 1px solid var(--accent-color);
   border-radius: 6px;
 }
 
 @media (prefers-color-scheme: dark) {
   .highlight {
-    border: 1px solid color-mix(in srgb, black 40%, var(--link-color));
+    border: 1px solid color-mix(in srgb, black 40%, var(--accent-color));
   }
 }
 
@@ -361,7 +389,7 @@ figcaption {
   font-family: var(--font-monospace) !important;
   background: transparent !important;
   border-width: 4px;
-  border-color: var(--link-color);
+  border-color: var(--accent-color);
   border-style: ridge;
   border-radius: var(--border-radius);
   width: 400px !important;
@@ -388,7 +416,7 @@ figcaption {
 }
 
 #myWebRing > div:last-child {
-  background-color: var(--link-color) !important;
+  background-color: var(--accent-color) !important;
   height: 26px !important;
 }
 
@@ -573,8 +601,12 @@ body main .comentario-root.comentario-root {
 
   /* Use site link color for "watermark" */
   .comentario-footer {
-    --cmntr-link-color: var(--link-color);
-    --cmntr-link-hover-color: color-mix(in srgb, black 20%, var(--link-color));
+    --cmntr-link-color: var(--accent-color);
+    --cmntr-link-hover-color: color-mix(
+      in srgb,
+      black 20%,
+      var(--accent-color)
+    );
   }
 
   /* Hide sorting buttons
