@@ -479,6 +479,10 @@ figcaption {
   object-fit: cover;
 }
 
+.rss-only {
+  display: none;
+}
+
 /* Comentario overrides */
 body main .comentario-root.comentario-root {
   /* Remove background behind composer wrapper */
